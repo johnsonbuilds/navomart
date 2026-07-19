@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-nav-bg: #ffffff;
+  --color-nav-bg-secondary: #f5f5f7;
+  --color-nav-text: #1d1d1f;
+  --color-nav-text-secondary: #86868b;
+  --color-nav-text-tertiary: #6e6e73;
+  --color-nav-accent: #0071e3;
+  --color-nav-accent-hover: #0077ed;
+  --color-nav-border: #d2d2d7;
+  --font-sans: 'Inter', var(--font-geist-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.47059;
+  overflow-x: hidden;
+}
+
+.font-sans {
+  font-family: 'Inter', var(--font-geist-sans) !important;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Toast animation */
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(100px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
